@@ -3,6 +3,10 @@ pipeline{
     tools {
   maven 'maven3'
 }
+options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '7')
+}
+
 
 
     stages{
